@@ -15,7 +15,13 @@ private:
     string first_name_;
     string last_name_;
 };
-// Enter your code here.
+
+ostream& operator<<(ostream& os, const Person& pr)  
+{  
+    os <<"first_name=" <<pr.get_first_name() << ",last_name=" << pr.get_last_name();  
+    return os;  
+} 
+
 
 
 int main() {
@@ -25,3 +31,4 @@ int main() {
     cout << p << " " << event << endl;
     return 0;
 }
+
